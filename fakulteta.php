@@ -84,13 +84,35 @@ $row = mysqli_fetch_array($result);
             </div>
         </div>
         <br>
+        <br/>
         <div class="row">
-            <div class="col-lg-12" style=" background-color: inherit; box-shadow: inherit; border-top-style: inherit; border-top-color: inherit; margin:0 auto 0 5%; position:relative; width: 90%; padding-bottom: 5%; ">
+            <div id="map-canvas" class="col-lg-12" style="height:20em; background-color: inherit; box-shadow: inherit; border-top-style: inherit; border-top-color: inherit; margin:0 auto 0 5%; position:relative; width: 90%; padding-bottom: 5%; ">
                 
             </div>
         </div>
     </div>
 
+      </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+
+      function initialize() {
+  var myLatlng = new google.maps.LatLng(<?php echo $row['geo_x'] ?>, <?php echo $row['geo_y'] ?>);
+  var mapOptions = {
+    zoom: 16,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: '<?php echo $row['naslov']; ?>'
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
     <style>
         .col-lg-12{
 
