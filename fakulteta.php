@@ -47,17 +47,15 @@ $row = mysqli_fetch_array($result);
                type:"POST",
                data:{state:state , IDfac: IDF},
                success: function () {
-                        
-                         
-                        
+                   
                     }
-               
            });
         });
         </script>
         <hr/>
         <br/>
         <div class="row">
+            <div class="col-lg-12" style=" padding: 0; height:20em; background-color: inherit; box-shadow: inherit; border-top-style: inherit; border-top-color: inherit; margin:0 auto 0 5%; position:relative; width: 90%; padding-bottom: 5%; ">
             <div class="col-lg-6">
                 <div class="row">
                     <h4 style="margin-left: 3%;">Podatki</h4>
@@ -83,13 +81,12 @@ $row = mysqli_fetch_array($result);
                 
             </div>
         </div>
-        <br>
-        <br/>
-        <div class="row">
-            <div id="map-canvas" class="col-lg-12" style="height:20em; background-color: inherit; box-shadow: inherit; border-top-style: inherit; border-top-color: inherit; margin:0 auto 0 5%; position:relative; width: 90%; padding-bottom: 5%; ">
+        <div class="row" style="margin-top: -200%;">
+            <div id="map-canvas" class="col-lg-12" style=" height:20em; background-color: inherit; box-shadow: inherit; border-top-style: inherit; border-top-color: inherit; margin:0 auto 0 5%; position:relative; width: 90%; padding-bottom: 5%; ">
                 
             </div>
         </div>
+    </div>
     </div>
 
       </style>
