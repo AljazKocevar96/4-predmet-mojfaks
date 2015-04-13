@@ -5,7 +5,9 @@ include_once 'header.php';
 
 $IdFakultete = (int) $_GET['id'];
 
-
+$query2="SELECT * FROM favoriteFaculty WHERE faculty_id=".$IdFakultete;
+$result2=  mysqli_query($link, $query2); 
+$row2=  mysqli_fetch_array($result2); 
 
 $query = "SELECT * FROM fakultete WHERE id=" . $IdFakultete;
 $result = mysqli_query($link, $query);
@@ -23,7 +25,14 @@ $row = mysqli_fetch_array($result);
             <h3 style="margin-left: 3%;"><?php echo $row['ime']; ?></h3>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
-                <button id="favoriteFaculty" type="button" class="btn btn-primary" style="margin-top: 5%;"> <i id="ikona" class="fa fa-star"></i> <span id="tekst">Med priljubljene</span></button>
+                <?php if($row2['user_id']==$_SESSION['user_id'] && $row2['state']=="favorited"){ ?>
+                <button id="favoriteFaculty" type="button" class="btn btn-primary" style="margin-top: 5%;"> <i id="ikona" class="fa fa-star"></i> <span id="tekst">Priljubljeno</span></button>
+                <?php }
+                else { ?>
+               <button id="favoriteFaculty" type="button" class="btn btn-primary" style="margin-top: 5%;"> <i id="ikona" class="fa fa-star"></i> <span id="tekst">Med priljubljene</span></button>     
+                    
+                <?php }
+                ?>
             </div>
         </div>
         <script>
