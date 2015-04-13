@@ -38,7 +38,7 @@ $row = mysqli_fetch_array($result);
         <script>
         $("#favoriteFaculty").click(function(){
             
-           alert("Kliknjeno"); 
+           
            var state="favorited";
            var IDF= <?php echo $IdFakultete; ?>
            
@@ -48,7 +48,7 @@ $row = mysqli_fetch_array($result);
                data:{state:state , IDfac: IDF},
                success: function () {
                         
-                         $("#tekst").text("Priljubljeno"); 
+                         
                         
                     }
                
