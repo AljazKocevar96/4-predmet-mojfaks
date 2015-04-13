@@ -5,32 +5,15 @@ include_once 'header.php';
 
 $IdFakultete = (int) $_GET['id'];
 
+
+
 $query = "SELECT * FROM fakultete WHERE id=" . $IdFakultete;
 $result = mysqli_query($link, $query);
 
 $row = mysqli_fetch_array($result);
 ?>
 
-<script>
-    $("#favoriteFaculty").on("click",function(){
-        
-        var state= 1; 
-        var IDF=<?php echo $IdFakultete ?>; 
-        
-       $.ajax({
-          url:"favoriteFaculty.php",
-          type:"POST",
-          data:{favorite:state , IDfakultete:IDF},
-          success: function () {
-                        
-                       alert("ok"); 
-                        
-                    }
-           
-       });
-       
-    });
-</script>
+
 
 <div class="content">
     <div class="col-lg-12" >
@@ -40,9 +23,29 @@ $row = mysqli_fetch_array($result);
             <h3 style="margin-left: 3%;"><?php echo $row['ime']; ?></h3>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
-                <button id="favoriteFaculty" type="button" class="btn btn-primary" style="margin-top: 5%;"><i class="fa fa-star" ></i> Med priljubljene</button>
+                <button id="favoriteFaculty" type="button" class="btn btn-primary" style="margin-top: 5%;"> <i id="ikona" class="fa fa-star"></i> <span id="tekst">Med priljubljene</span></button>
             </div>
         </div>
+        <script>
+        $("#favoriteFaculty").click(function(){
+            
+           alert("Kliknjeno"); 
+           var state="favorited";
+           var IDF= <?php echo $IdFakultete; ?>
+           
+           $.ajax({
+               url:"favoriteFaculty.php",
+               type:"POST",
+               data:{state:state , IDfac: IDF},
+               success: function () {
+                        
+                         $("#tekst").text("Priljubljeno"); 
+                        
+                    }
+               
+           });
+        });
+        </script>
         <hr/>
         <br/>
         <div class="row">

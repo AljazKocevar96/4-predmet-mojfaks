@@ -78,9 +78,7 @@ $resultKR = mysqli_query($link, $queryKR);
                                 <div class="col-lg-11 col-md-11 col-xs-10 col-sm-11">
                             <h4><?php echo $rowLJ['ime']; ?></h4>
                                 </div>
-                                <div class="col-lg-1 col-md-1 col-xs-2 col-sm-1">
-                                    <i id="star" class="fa fa-star" style="font-size: 1.2em; margin-top: 20%; "></i>
-                                </div>
+                                
                                
                             </div>
                                 
@@ -106,9 +104,7 @@ $resultKR = mysqli_query($link, $queryKR);
                                 <div class="col-lg-11 col-md-11 col-xs-10 col-sm-11">
                             <h4><?php echo $rowMB['ime']; ?></h4>
                                 </div>
-                                 <div class="col-lg-1 col-md-1 col-xs-2 col-sm-1">
-                                    <i id="star" class="fa fa-star" style="font-size: 1.2em; margin-top: 20%; "></i>
-                                </div>
+                                 
                                
                             </div>
                                 
@@ -133,9 +129,7 @@ $resultKR = mysqli_query($link, $queryKR);
                                 <div class="col-lg-11 col-md-11 col-xs-10 col-sm-11">
                             <h4><?php echo $rowKP['ime']; ?></h4>
                                 </div>
-                                <div class="col-lg-1 col-md-1 col-xs-2 col-sm-1">
-                                    <i id="star" class="fa fa-star" style="font-size: 1.2em; margin-top: 20%; "></i>
-                                </div>
+                                
                                
                             </div>
                                 
@@ -162,9 +156,7 @@ $resultKR = mysqli_query($link, $queryKR);
                                 <div class="col-lg-11 col-md-11 col-xs-10 col-sm-11">
                             <h4><?php echo $rowNG['ime']; ?></h4>
                              </div>
-                             <div class="col-lg-1 col-md-1 col-xs-2 col-sm-1">
-                                    <i id="star" class="fa fa-star" style="font-size: 1.2em; margin-top: 20%; "></i>
-                                </div>
+                            
                                
                             </div>
                         </li>
@@ -188,9 +180,7 @@ $resultKR = mysqli_query($link, $queryKR);
                                 <div class="col-lg-11 col-md-11 col-xs-10 col-sm-11">
                             <h4><?php echo $rowCE['ime']; ?></h4>
                             </div>
-                             <div class="col-lg-1 col-md-1 col-xs-2 col-sm-1">
-                                    <i id="star" class="fa fa-star" style="font-size: 1.2em; margin-top: 20%; "></i>
-                                </div>
+                           
                                 
                             </div>
                         </li>
@@ -214,9 +204,7 @@ $resultKR = mysqli_query($link, $queryKR);
                                 <div class="col-lg-11 col-md-11 col-xs-10 col-sm-11">
                             <h4><?php echo $rowKR['ime']; ?></h4>
                                 </div>
-                                <div class="col-lg-1 col-md-1 col-xs-2 col-sm-1">
-                                    <i id="star" class="fa fa-star" style="font-size: 1.2em; margin-top: 20%; "></i>
-                                </div>
+                              
                             </div>
                         </li>
                     

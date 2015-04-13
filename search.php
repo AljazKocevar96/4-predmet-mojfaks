@@ -16,9 +16,6 @@ while ($row = mysqli_fetch_array($result)) {
             . "<div class=\"col-lg-11\">"
             . "<h4>".$row["ime"]."</h4>"
             . "</div>"
-            . "<div class=\"col-lg-1\">"
-            . "<i id=\"star\" class=\"fa fa-star\" style=\"font-size: 1.2em; margin-top: 15%; \"></i>"
-            . "</div>"
             . "</div>"
             . "</li>"
             . "</a>"; 
