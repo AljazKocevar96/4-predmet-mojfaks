@@ -83,6 +83,12 @@ $row = mysqli_fetch_array($result);
                 
             </div>
         </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12" style=" background-color: inherit; box-shadow: inherit; border-top-style: inherit; border-top-color: inherit; margin:0 auto 0 5%; position:relative; width: 90%; padding-bottom: 5%; ">
+                
+            </div>
+        </div>
     </div>
 
     <style>
