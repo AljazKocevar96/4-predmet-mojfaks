@@ -140,7 +140,7 @@ include_once 'db.php';
                             </button                         <!-- Left&Right pomakne menij na 0 na desni strani da je v liniji z gumbkom, 
                                                              na levi pa vzame prostora kolikor je širok menij avtomatsko -->
                             <ul class="dropdown-menu" style="right:0; left: auto;"  role="menu" aria-labelledby="dropdownMenu1" >
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#" ><i class="fa fa-wrench"></i> Profil</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="profil.php" ><i class="fa fa-wrench"></i> Profil</a></li>
                                 <hr style="margin:0 1em 0 1em;">
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-list"></i> Moje teme</a></li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-comment"></i> Sporočila</a></li>
