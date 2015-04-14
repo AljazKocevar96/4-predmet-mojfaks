@@ -1,6 +1,7 @@
 <?php
 include_once 'db.php';
 include_once 'header.php';
+include_once 'session.php';
 
 
 $IdFakultete = (int) $_GET['id'];
@@ -13,23 +14,27 @@ $query = "SELECT * FROM fakultete WHERE id=" . $IdFakultete;
 $result = mysqli_query($link, $query);
 
 $row = mysqli_fetch_array($result);
+
+
+
+
 ?>
 
 
 
-<div class="content">
+
     <div class="col-lg-12" >
 
         <div class="row">
             <div class="col-lg-10 col-md-9 col-sm-8 col-xs-5">
-            <h3 style="margin-left: 3%;"><?php echo $row['ime']; ?></h3>
+            <h3 style="margin-left: 3%;"><?php echo $row['ime'] ; ?></h3>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
                 <?php if($row2['user_id']==$_SESSION['user_id'] && $row2['state']=="favorited"){ ?>
-                <button id="favoriteFaculty" type="button" class="btn btn-primary" style="margin-top: 5%;"> <i id="ikona" class="fa fa-star"></i> <span id="tekst">Priljubljeno</span></button>
+                <button id="favoriteFaculty" type="button" class="btn btn-primary" style="margin-top: 8%;"> <i id="ikona" class="fa fa-star"></i> <span id="tekst">Priljubljeno</span></button>
                 <?php }
                 else { ?>
-               <button id="favoriteFaculty" type="button" class="btn btn-primary" style="margin-top: 5%;"> <i id="ikona" class="fa fa-star"></i> <span id="tekst">Med priljubljene</span></button>     
+               <button id="favoriteFaculty" type="button" class="btn btn-primary" style="margin-top: 8%;"> <i id="ikona" class="fa fa-star"></i> <span id="tekst">Med priljubljene</span></button>     
                     
                 <?php }
                 ?>
@@ -47,6 +52,20 @@ $row = mysqli_fetch_array($result);
                type:"POST",
                data:{state:state , IDfac: IDF},
                success: function () {
+                   
+                  if($("#tekst").text()==="Med priljubljene"){
+                      
+                      $("#tekst").text("Priljubljeno"); 
+                  }
+                  
+                  else{
+                      
+                      $("#tekst").text("Med priljubljene"); 
+                  }
+                   
+                   
+                   
+                   
                    
                     }
            });
@@ -81,7 +100,7 @@ $row = mysqli_fetch_array($result);
                 
             </div>
         </div>
-        <div class="row" style="margin-top: -200%;">
+        <div class="row" >
             <div id="map-canvas" class="col-lg-12" style=" height:20em; background-color: inherit; box-shadow: inherit; border-top-style: inherit; border-top-color: inherit; margin:0 auto 0 5%; position:relative; width: 90%; padding-bottom: 5%; ">
                 
             </div>
@@ -132,7 +151,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             margin:0 auto 0 5%; 
             position:relative; 
             width: 90%; 
-            padding-bottom: 5%; 
+            padding-bottom: 3.5%; 
 
         }
 
