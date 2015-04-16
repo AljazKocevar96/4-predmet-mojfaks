@@ -10,8 +10,10 @@ $rowUser = mysqli_fetch_array($resultUser);
 
 $queryFaculty = "SELECT * FROM fakultete fa INNER JOIN favoriteFaculty ff ON fa.id=ff.faculty_id";
 $resultFF = mysqli_query($link, $queryFaculty);
+
 $dat_roj=explode("-" ,$rowUser['dat_roj']);
 $dat_roj=$dat_roj[2].". ".$dat_roj[1].". ".$dat_roj[0]; 
+
 $dat_pridruzitve=  explode(":", $rowUser['dat_pridruzitve']); 
 $letnica=explode(" ",$dat_pridruzitve[2]);
 $dat_pridruzitve= $dat_pridruzitve[0].". ".$dat_pridruzitve[1].". ".$letnica[0]; 
@@ -57,11 +59,25 @@ $dat_pridruzitve= $dat_pridruzitve[0].". ".$dat_pridruzitve[1].". ".$letnica[0];
                 <div class="row">
                     <div class="col-lg-12">
                         <table class="table table-hover">
-                            <tbody>
+                            <thead>
                                 <tr>
-                                    <td>Fakulteta</td>
-                                    <td>Priljubljeno</td>
+                                    <th>Ime Fakultete</th>
+                                    <th>Mesto</th>
+                                    <td><i class="fa fa-star" style="color:#bbbbbb;"></i></td>
                                 </tr>
+                            </thead>
+                            <tbody>
+                            <?php $i=0;  
+                            while($rowFF = mysqli_fetch_array($resultFF)){ 
+                                if($rowFF['state']=="favorited"){
+                                ?>
+                                <tr>
+                                    <td><a href="fakulteta.php?id=<?php echo $rowFF['0'];?>"><?php echo $rowFF['ime'];?></td>
+                                    <td><?php echo $rowFF['kraj'];  ?></td>
+                                    <td><i class="fa fa-star" style="color:#febe29;"></i></td>
+                                </tr>
+                            <?php }
+                            }?>
                             </tbody>
                         </table>
                     </div>
@@ -89,6 +105,7 @@ $dat_pridruzitve= $dat_pridruzitve[0].". ".$dat_pridruzitve[1].". ".$letnica[0];
         margin:0 auto 0 5%; 
         position:relative; 
         width: 90%; 
+        padding-bottom: 3%; 
 
     }
 </style>
