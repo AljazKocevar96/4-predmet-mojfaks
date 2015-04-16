@@ -142,7 +142,6 @@ include_once 'db.php';
                             <ul class="dropdown-menu" style="right:0; left: auto;"  role="menu" aria-labelledby="dropdownMenu1" >
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="profil.php" ><i class="fa fa-wrench"></i> Profil</a></li>
                                 <hr style="margin:0 1em 0 1em;">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-list"></i> Moje teme</a></li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-comment"></i> Sporočila</a></li>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-check"></i>Odločitve in rezultati</a></li>
                                 <hr style="margin:0 1em 0 1em;">
