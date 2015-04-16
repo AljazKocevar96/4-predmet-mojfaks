@@ -143,7 +143,7 @@ include_once 'session.php';
                         <?php while ($rowTopicVpis = mysqli_fetch_array($resultTopicVpis)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><?php echo $rowTopicVpis['name']; ?></div>
+                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><a href="vprasanje.php?id=<?php echo $rowTopicVpis['id']; ?>"><?php echo $rowTopicVpis['name']; ?></a></div>
                                     <div class="col-lg-2 col-md-3 col-sm-2 col-xs-5">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
@@ -199,7 +199,7 @@ include_once 'session.php';
                         <?php while ($rowTopicMnenja = mysqli_fetch_array($resultTopicMnenja)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><?php echo $rowTopicMnenja['name']; ?></div>
+                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><a href="vprasanje.php?id=<?php echo $rowTopicMnenja['id']; ?>"><?php echo $rowTopicMnenja['name']; ?></a></div>
                                     <div class="col-lg-2 col-md-3 col-sm-2 col-xs-5">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
@@ -254,7 +254,7 @@ include_once 'session.php';
                         <?php while ($rowTopicNovicke = mysqli_fetch_array($resultTopicNovicke)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><?php echo $rowTopicNovicke['name']; ?></div>
+                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><a href="vprasanje.php?id=<?php echo $rowTopicNovicke['id']; ?>"><?php echo $rowTopicNovicke['name']; ?></a></div>
                                     <div class="col-lg-2 col-md-3 col-sm-2 col-xs-5">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
@@ -310,7 +310,7 @@ include_once 'session.php';
                         <?php while ($rowTopicVpis = mysqli_fetch_array($resultTopicVpis)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9"><?php echo $rowTopicVpis['name']; ?></div>
+                                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9"><a href="vprasanje.php?id=<?php echo $rowTopicVpis['id']; ?>"><?php echo $rowTopicVpis['name']; ?></a></div>
                                     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
@@ -359,7 +359,7 @@ include_once 'session.php';
                         <?php while ($rowTopicMnenja = mysqli_fetch_array($resultTopicMnenja)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-11 col-md-1 col-sm-11 col-xs-9"><?php echo $rowTopicMnenja['name']; ?></div>
+                                    <div class="col-lg-11 col-md-1 col-sm-11 col-xs-9"><a href="vprasanje.php?id=<?php echo $rowTopicMnenja['id']; ?>"><?php echo $rowTopicMnenja['name']; ?></a></div>
                                     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
@@ -409,7 +409,7 @@ include_once 'session.php';
                         <?php while ($rowTopicNovicke = mysqli_fetch_array($resultTopicNovicke)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9"><?php echo $rowTopicNovicke['name']; ?></div>
+                                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9"><a href="vprasanje.php?id=<?php echo $rowTopicNovicke['id']; ?>"><?php echo $rowTopicNovicke['name']; ?></a></div>
                                     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
