@@ -52,21 +52,12 @@ $row = mysqli_fetch_array($result);
                type:"POST",
                data:{state:state , IDfac: IDF},
                success: function () {
-                   
                   if($("#tekst").text()==="Med priljubljene"){
-                      
                       $("#tekst").text("Priljubljeno"); 
                   }
-                  
-                  else{
-                      
+                  else{ 
                       $("#tekst").text("Med priljubljene"); 
                   }
-                   
-                   
-                   
-                   
-                   
                     }
            });
         });
