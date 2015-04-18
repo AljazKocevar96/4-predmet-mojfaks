@@ -291,5 +291,6 @@ $resultKR = mysqli_query($link, $queryKR);
         width: 90%; 
         border-top-style: solid;
         border-top-color: #3e5e9a; 
+        padding-bottom: 3%; 
     }
 </style>

@@ -3,6 +3,7 @@
 include_once 'db.php';
 include_once 'funkcije.php';
 
+
 $KljucneBesede = clean_post($_POST['iskano']);
 
 $query = "SELECT * FROM fakultete WHERE (ime LIKE '%" . $KljucneBesede . "%') OR (kratica LIKE '%" . $KljucneBesede . "%')";

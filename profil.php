@@ -3,12 +3,13 @@ include_once 'db.php';
 include_once 'header.php';
 include_once 'funkcije.php';
 include_once 'session.php';
-$queryUser = "SELECT * FROM uporabniki";
+
+$queryUser = "SELECT * FROM uporabniki WHERE id=".$_SESSION['user_id'];
 $resultUser = mysqli_query($link, $queryUser);
 $rowUser = mysqli_fetch_array($resultUser);
 
 
-$queryFaculty = "SELECT * FROM fakultete fa INNER JOIN favoriteFaculty ff ON fa.id=ff.faculty_id";
+$queryFaculty = "SELECT * FROM fakultete fa INNER JOIN favoritefaculty ff ON fa.id=ff.faculty_id WHERE ff.user_id=".$_SESSION['user_id'];
 $resultFF = mysqli_query($link, $queryFaculty);
 
 $dat_roj=explode("-" ,$rowUser['dat_roj']);
@@ -17,6 +18,8 @@ $dat_roj=$dat_roj[2].". ".$dat_roj[1].". ".$dat_roj[0];
 $dat_pridruzitve=  explode(":", $rowUser['dat_pridruzitve']); 
 $letnica=explode(" ",$dat_pridruzitve[2]);
 $dat_pridruzitve= $dat_pridruzitve[0].". ".$dat_pridruzitve[1].". ".$letnica[0]; 
+
+
 ?>
 
 <div class="col-lg-12 bg">
@@ -39,7 +42,7 @@ $dat_pridruzitve= $dat_pridruzitve[0].". ".$dat_pridruzitve[1].". ".$letnica[0];
                             <img src="<?php echo $rowUser['slika']; ?>" alt="slika" name="slika" style="border-radius: 50%; width: 5em; "/>
                         </div>
                         <div class="col-lg-8">
-                            <span><strong><?php echo $rowUser['ime'] . " " . $rowUser['priimek']; ?></strong></span><br>
+                            <span><strong><?php echo $rowUser['ime']. " " . $rowUser['priimek']; ?></strong></span><br>
                             <span><strong>E-pošta: </strong><?php echo $rowUser['email']; ?></span><br>
                             <span><strong>Datum rojstva: </strong><?php echo $dat_roj; ?></span><br>
                             <span><strong>Datum pridružitve: </strong><?php echo $dat_pridruzitve; ?></span><br>
@@ -72,7 +75,7 @@ $dat_pridruzitve= $dat_pridruzitve[0].". ".$dat_pridruzitve[1].". ".$letnica[0];
                                 if($rowFF['state']=="favorited"){
                                 ?>
                                 <tr>
-                                    <td><a href="fakulteta.php?id=<?php echo $rowFF['0'];?>"><?php echo $rowFF['ime'];?></td>
+                                    <td><a href="fakulteta.php?id=<?php echo $rowFF['0'];?>"><?php echo $rowFF['ime'];?></a></td>
                                     <td><?php echo $rowFF['kraj'];  ?></td>
                                     <td><i class="fa fa-star" style="color:#febe29;"></i></td>
                                 </tr>

@@ -3,8 +3,6 @@ include_once 'header.php';
 include_once 'db.php';
 include_once 'funkcije.php';
 include_once 'session.php';
-
-
 ?>
 
 <style>
@@ -97,17 +95,17 @@ include_once 'session.php';
              </div>
          </div>-->
 
-    <?php
-    $query = "SELECT * FROM uporabniki WHERE id=" . $_SESSION['user_id'] . ";";
-    $result = mysqli_query($link, $query);
-    $row = mysqli_fetch_array($result);
+<?php
+$query = "SELECT * FROM uporabniki WHERE id=" . $_SESSION['user_id'] . ";";
+$result = mysqli_query($link, $query);
+$row = mysqli_fetch_array($result);
 
 
 
 
 
-    if ($row['admin'] == 1) {
-        ?>
+if ($row['admin'] == 1) {
+    ?>
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingOne">
@@ -134,13 +132,13 @@ include_once 'session.php';
                         </div>
                     </div>
                 </div>
-                <?php
-                $queryTopicVpis = "SELECT * FROM topic WHERE tema_id= 1";
-                $resultTopicVpis = mysqli_query($link, $queryTopicVpis);
-                ?>
+    <?php
+    $queryTopicVpis = "SELECT * FROM topic WHERE tema_id= 1";
+    $resultTopicVpis = mysqli_query($link, $queryTopicVpis);
+    ?>
                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                     <div class="list-group">
-                        <?php while ($rowTopicVpis = mysqli_fetch_array($resultTopicVpis)) { ?>
+    <?php while ($rowTopicVpis = mysqli_fetch_array($resultTopicVpis)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><a href="vprasanje.php?id=<?php echo $rowTopicVpis['id']; ?>"><?php echo $rowTopicVpis['name']; ?></a></div>
@@ -160,7 +158,7 @@ include_once 'session.php';
 
                                 </div>
                             </li>
-                        <?php } ?>
+    <?php } ?>
 
                     </div>
                 </div>
@@ -190,13 +188,13 @@ include_once 'session.php';
                         </div>
                     </div>
                 </div>
-                <?php
-                $queryTopicMnenja = "SELECT * FROM topic WHERE tema_id= 2";
-                $resultTopicMnenja = mysqli_query($link, $queryTopicMnenja);
-                ?>
+    <?php
+    $queryTopicMnenja = "SELECT * FROM topic WHERE tema_id= 2";
+    $resultTopicMnenja = mysqli_query($link, $queryTopicMnenja);
+    ?>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="list-group">
-                        <?php while ($rowTopicMnenja = mysqli_fetch_array($resultTopicMnenja)) { ?>
+    <?php while ($rowTopicMnenja = mysqli_fetch_array($resultTopicMnenja)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><a href="vprasanje.php?id=<?php echo $rowTopicMnenja['id']; ?>"><?php echo $rowTopicMnenja['name']; ?></a></div>
@@ -216,7 +214,7 @@ include_once 'session.php';
 
                                 </div>
                             </li>
-                        <?php } ?>
+    <?php } ?>
                     </div>
                 </div>
             </div>
@@ -245,13 +243,13 @@ include_once 'session.php';
                         </div>
                     </div>
                 </div>
-                <?php
-                $queryTopicNovicke = "SELECT * FROM topic WHERE tema_id= 3";
-                $resultTopicNovicke = mysqli_query($link, $queryTopicNovicke);
-                ?>
+    <?php
+    $queryTopicNovicke = "SELECT * FROM topic WHERE tema_id= 3";
+    $resultTopicNovicke = mysqli_query($link, $queryTopicNovicke);
+    ?>
                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                     <div class="list-group">
-                        <?php while ($rowTopicNovicke = mysqli_fetch_array($resultTopicNovicke)) { ?>
+    <?php while ($rowTopicNovicke = mysqli_fetch_array($resultTopicNovicke)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><a href="vprasanje.php?id=<?php echo $rowTopicNovicke['id']; ?>"><?php echo $rowTopicNovicke['name']; ?></a></div>
@@ -271,15 +269,15 @@ include_once 'session.php';
 
                                 </div>
                             </li>
-                        <?php } ?>
+    <?php } ?>
 
                     </div>
                 </div>
             </div>
         </div>
-        <?php
-    } else {
-        ?>
+    <?php
+} else {
+    ?>
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingOne">
@@ -301,13 +299,13 @@ include_once 'session.php';
                         </div>
                     </div>
                 </div>
-                <?php
-                $queryTopicVpis = "SELECT * FROM topic WHERE tema_id= 1";
-                $resultTopicVpis = mysqli_query($link, $queryTopicVpis);
-                ?>
+    <?php
+    $queryTopicVpis = "SELECT * FROM topic WHERE tema_id= 1";
+    $resultTopicVpis = mysqli_query($link, $queryTopicVpis);
+    ?>
                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                     <div class="list-group">
-                        <?php while ($rowTopicVpis = mysqli_fetch_array($resultTopicVpis)) { ?>
+    <?php while ($rowTopicVpis = mysqli_fetch_array($resultTopicVpis)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9"><a href="vprasanje.php?id=<?php echo $rowTopicVpis['id']; ?>"><?php echo $rowTopicVpis['name']; ?></a></div>
@@ -324,7 +322,7 @@ include_once 'session.php';
 
                                 </div>
                             </li>
-                        <?php } ?>
+    <?php } ?>
 
                     </div>
                 </div>
@@ -350,13 +348,13 @@ include_once 'session.php';
                         </div>
                     </div>
                 </div>
-                <?php
-                $queryTopicMnenja = "SELECT * FROM topic WHERE tema_id= 2";
-                $resultTopicMnenja = mysqli_query($link, $queryTopicMnenja);
-                ?>
+    <?php
+    $queryTopicMnenja = "SELECT * FROM topic WHERE tema_id= 2";
+    $resultTopicMnenja = mysqli_query($link, $queryTopicMnenja);
+    ?>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="list-group">
-                        <?php while ($rowTopicMnenja = mysqli_fetch_array($resultTopicMnenja)) { ?>
+    <?php while ($rowTopicMnenja = mysqli_fetch_array($resultTopicMnenja)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col-lg-11 col-md-1 col-sm-11 col-xs-9"><a href="vprasanje.php?id=<?php echo $rowTopicMnenja['id']; ?>"><?php echo $rowTopicMnenja['name']; ?></a></div>
@@ -373,7 +371,7 @@ include_once 'session.php';
 
                                 </div>
                             </li>
-                        <?php } ?>
+    <?php } ?>
                     </div>
                 </div>
             </div>
@@ -400,13 +398,13 @@ include_once 'session.php';
                     </div>
                 </div>
 
-                <?php
-                $queryTopicNovicke = "SELECT * FROM topic WHERE tema_id= 3";
-                $resultTopicNovicke = mysqli_query($link, $queryTopicNovicke);
-                ?>
+    <?php
+    $queryTopicNovicke = "SELECT * FROM topic WHERE tema_id= 3";
+    $resultTopicNovicke = mysqli_query($link, $queryTopicNovicke);
+    ?>
                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                     <div class="list-group">
-                        <?php while ($rowTopicNovicke = mysqli_fetch_array($resultTopicNovicke)) { ?>
+    <?php while ($rowTopicNovicke = mysqli_fetch_array($resultTopicNovicke)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9"><a href="vprasanje.php?id=<?php echo $rowTopicNovicke['id']; ?>"><?php echo $rowTopicNovicke['name']; ?></a></div>
@@ -422,12 +420,12 @@ include_once 'session.php';
 
                                 </div>
                             </li>
-                        <?php } ?>    
+    <?php } ?>    
                     </div>
                 </div>
             </div>
         </div>
-    <?php } ?> 
+<?php } ?> 
     <style>
         #favorite:hover {
             color:#febe29;
@@ -447,12 +445,21 @@ include_once 'session.php';
         }
     </style>
     <hr/>
-    <button type="button" class="btn btn-warning" style="float:right;" data-toggle="modal" data-target="#topicModal"><i class="fa fa-plus"></i> Dodaj temo</button>
-
+    <div class="row">
+         <div class="col-lg-10 col-md-10 col-sm-9 col-xs-6">
+                            <div id="SuccessAlert" class="alert alert-success" role="alert" style=" display:none;" ><center><strong><i class="fa fa-check"></i> Tema uspešno dodana !</strong></center></div>
+                            <div id="WarningAlert" class="alert alert-warning" role="alert" style=" display:none;"><center><strong><i class="fa fa-exclamation-triangle"></i> Nekaterih polj niste izpolnili !</strong></center></div>
+                            <div id="FailWarning" class="alert alert-danger" role="alert" style=" display:none;"><center><strong><i class="fa fa-times"></i> Ups. Prišlo je do napake !</strong></center></div>
+                        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+    
+            <button type="button" class="btn btn-warning" style="float:right; margin-top:3%; margin-right: 10%;  " data-toggle="modal" data-target="#topicModal"><i class="fa fa-plus"></i> Dodaj temo</button>
+        </div>
+        </div>
 
     <!-- Modal -->
     <div class="modal fade" id="topicModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-          
+
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -460,14 +467,14 @@ include_once 'session.php';
                     <h4 class="modal-title" id="myModalLabel">Dodajanje nove teme</h4>
                 </div>
                 <form action="topicWrite.php" method="POST">
-                <div class="modal-body">
-                  
+                    <div class="modal-body">
+
                         <div class="input-group input-group">
                             <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-question"></i></span>
                             <input required="required" id="imeTeme" type="text" name="ime" class="form-control" placeholder="Ime teme" aria-describedby="sizing-addon1">
                         </div>
                         <br/>
-                        
+
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-lg-2 col-md-2 col-xs-4 col-sm-2">
@@ -476,89 +483,89 @@ include_once 'session.php';
                                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
                                     <select required="required" id="teme" class="form-control"  name='kateg' >
                                         <option></option>
-                                        <?php
-                                        $query4 = "SELECT * FROM teme ;";
-                                        $result4 = mysqli_query($link, $query4);
+<?php
+$query4 = "SELECT * FROM teme ;";
+$result4 = mysqli_query($link, $query4);
 
-                                        while ($row4 = mysqli_fetch_array($result4)) {
-                                            ?>
+while ($row4 = mysqli_fetch_array($result4)) {
+    ?>
 
                                             <option  value="<?php echo $row4['id']; ?>"> <?php echo $row4['ime']; ?></option>
 
-                                        <?php }
-                                        ?>
+<?php }
+?>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
-                             <label class="control-label"><h4>Vprašanje: </h4></label>
-                             <textarea id="question" required="required" class="form-control" placeholder="Vaše vprašanje" style="resize: vertical;" name="vpra"></textarea>
-                             
-                             
+                            <label class="control-label"><h4>Vprašanje: </h4></label>
+                            <textarea id="question" required="required" class="form-control" placeholder="Vaše vprašanje" style="resize: vertical;" name="vpra"></textarea>
+
+
                         </div>
-                    
 
 
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Prekliči </button>
-                    <input type="submit" id="submitTopic" class="btn btn-warning" value="Dodaj">
-                </div>
-</form>
+
+                    </div>
+                    <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Prekliči </button>
+                            <input type="submit" id="submitTopic" class="btn btn-warning" value="Dodaj">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    
-    <center>
-            <div id="SuccessAlert" class="alert alert-success" role="alert" style="width:30%; display:none; "><center><strong><i class="fa fa-check"></i> Tema uspešno dodana !</strong></center></div>
-            <div id="WarningAlert" class="alert alert-warning" role="alert" style="width:30%; display:none;"><center><strong><i class="fa fa-exclamation-triangle"></i> Nekaterih polj niste izpolnili !</strong></center></div>
-            <div id="FailWarning" class="alert alert-danger" role="alert" style="width:30%; display:none;"><center><strong><i class="fa fa-times"></i> Ups. Prišlo je do napake !</strong></center></div>
-    </center>
-          
-    
+
+
+    <div id="SuccessAlert" class="alert alert-success" role="alert" style="width:30%; display:none; "><center><strong><i class="fa fa-check"></i> Tema uspešno dodana !</strong></center></div>
+    <div id="WarningAlert" class="alert alert-warning" role="alert" style="width:30%; display:none;"><center><strong><i class="fa fa-exclamation-triangle"></i> Nekaterih polj niste izpolnili !</strong></center></div>
+    <div id="FailWarning" class="alert alert-danger" role="alert" style="width:30%; display:none;"><center><strong><i class="fa fa-times"></i> Ups. Prišlo je do napake !</strong></center></div>
+
+
+
     <script>
-   $(document).ready(function(){
-         
-                      var postState = "<?php echo $_SESSION['topicInsert']; ?>";
-                       '<?php unset($_SESSION['topicInsert']); ?>';
-                       
-                       
-                       
-                    if(postState === "success"){
-                        
-                        $('#SuccessAlert').show(); 
-                        
-                        setTimeout(function(){
-                            
-                            $('#SuccessAlert').fadeOut(1500); 
-                        },2000);
-                    }
-                    
-                    if(postState === "empty"){
-                        
-                        $('#WarningAlert').show(); 
-                        
-                        setTimeout(function(){
-                            
-                            $('#WarningAlert').fadeOut(1500); 
-                        },2000);
-                    }
-                    
-                     if(postState === "fail"){
-                        
-                        $('#FailAlert').show(); 
-                        
-                        setTimeout(function(){
-                            
-                            $('#FailAlert').fadeOut(1500); 
-                        },2000);
-                    }
-       
-   });
-   
+        $(document).ready(function () {
+
+            var postState = "<?php echo $_SESSION['topicInsert']; ?>";
+            '<?php unset($_SESSION['topicInsert']); ?>';
+
+
+
+            if (postState === "success") {
+
+                $('#SuccessAlert').show();
+
+                setTimeout(function () {
+
+                    $('#SuccessAlert').fadeOut(1500);
+                }, 2000);
+            }
+
+            if (postState === "empty") {
+
+                $('#WarningAlert').show();
+
+                setTimeout(function () {
+
+                    $('#WarningAlert').fadeOut(1500);
+                }, 2000);
+            }
+
+            if (postState === "fail") {
+
+                $('#FailAlert').show();
+
+                setTimeout(function () {
+
+                    $('#FailAlert').fadeOut(1500);
+                }, 2000);
+            }
+
+        });
+
     </script>
 </div>
 

@@ -6,7 +6,7 @@ include_once 'session.php';
 
 $IdFakultete = (int) $_GET['id'];
 
-$query2="SELECT * FROM favoriteFaculty WHERE faculty_id=".$IdFakultete;
+$query2="SELECT * FROM favoritefaculty WHERE faculty_id=".$IdFakultete;
 $result2=  mysqli_query($link, $query2); 
 $row2=  mysqli_fetch_array($result2); 
 
