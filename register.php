@@ -63,22 +63,27 @@
                             
                             <form method="post" action="DoRegister.php" role="form" style="z-index:1000; ">
                                 <fieldset>
-                                    <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon1" ><i class="fa fa-envelope"></i></span>
                                         <input class="form-control" placeholder="E-mail" name="email" type="text"/>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="input-group" style="margin-top:3%; ">
+                                        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-user"></i></span>
                                         <input class="form-control" placeholder="Ime" name="ime" type="text" />
                                     </div>
-                                    <div class="form-group">
+                                    <div class="input-group" style="margin-top:3%; ">
+                                        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-user"></i></span>
                                         <input class="form-control" placeholder="Priimek" name="priimek" type="text" />
                                     </div>
-                                    <div class="form-group">
+                                    <div class="input-group" style="margin-top:3%; ">
+                                        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-lock"></i></span>
                                         <input class="form-control" placeholder="Geslo" name="pass" type="password" />
                                     </div>
-                                    <div class="form-group">
+                                    <div class="input-group" style="margin-top:3%; ">
+                                        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-lock"></i></span>
                                         <input class="form-control" placeholder="Potrdite geslo" name="pass2" type="password" />
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group" style="margin-top:3%; ">
                                         <input class="form-control" placeholder="Datum rojstva" name="dat_roj" type="date" />
                                     </div>
 

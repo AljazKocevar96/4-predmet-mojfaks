@@ -1,7 +1,5 @@
 <?php
 include_once 'header.php';
-
-
     ?>
 
     <style>
@@ -55,15 +53,25 @@ include_once 'header.php';
                         <div class="panel-body">
                             <form method="post" action="loginDo.php" role="form">
                                 <fieldset>
-                                    <div class="form-group">
+                                    
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-user"></i></span>
                                         <input class="form-control" placeholder="E-mail" name="email" type="text"/>
                                     </div>
                                     
-                                    <div class="form-group">
+                                    <div class="input-group" style="margin-top:3%; ">
+                                        <span class="input-group-addon" id="sizing-addon1"><i class="fa fa-lock"></i></span>
                                         <input class="form-control" placeholder="Geslo" name="pass" type="password" />
                                     </div>
-
-                                    <input class="btn btn-lg btn-success btn-block" type="submit" value="Prijavi se">
+                                    <div class="row" style="margin-top:3%; ">
+                                        <div class="col-lg-12" >
+                                    <input class="btn btn-lg btn-success btn-block" style=" " type="submit" value="Prijavi se">
+                                        </div>
+                                        
+                                    </div>
+                                    <hr style="margin-top:3%;">
+                                    <a href="register.php" style="margin-top:0%; padding-bottom: 1%;">Še morda nimate računa ?</a>
+                                    
                                 </fieldset>
                             </form>
                         </div>
