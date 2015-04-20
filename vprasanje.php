@@ -25,7 +25,7 @@ $row = mysqli_fetch_array($result);
                 <div class="col-lg-11"><h4 style="margin-left: 3%; margin-top: 2%; "><strong><?php echo $row['ime'] . " " . $row['priimek']; ?> </strong><small> - <?php echo $row['add_date']; ?></small></h4></div>
             </div>
             <br>
-            <p style="margin-left: 12%; "><?php echo $row['question']; ?></p>
+            <p style="margin-left: 12%; margin-right: 5%; "><?php echo $row['question']; ?></p>
         </div>
     </div>
     <hr style="width: 96%; ">
@@ -41,6 +41,9 @@ $row = mysqli_fetch_array($result);
 <div class="col-lg-12 bg" style="margin-top: 2em; ">
     <h4 style="margin-left: 2%; color: #febe29;  ">Odgovori:</h4>
     <hr>
+    <div class="col-lg-12 warnings" >
+    <div id="WarningAlert" class="alert alert-warning" role="alert" style="display:none; ">Ups. Malo več pa le  napišite.</div>
+    </div>
     <div class="form-group">
         <textarea id="answer" required="required" class="form-control" placeholder="Vaš odgovor" style="resize: vertical;" name="ans"></textarea>
     </div>
@@ -51,7 +54,7 @@ $row = mysqli_fetch_array($result);
 </div>
 
 <div class="col-lg-12 warnings" >
-<div id="SuccessAlert" class="alert alert-success" role="alert" style="/*display:none;*/ "></div>
+<div id="SuccessAlert" class="alert alert-success" role="alert" style="display:none; ">Komentar objavljen</div>
 </div>
 
 <script>
@@ -59,6 +62,27 @@ $row = mysqli_fetch_array($result);
         document.getElementById("answer").value = "";
 
     }
+</script>
+<script>
+$('#submitAnswer').click(function(){
+   $.ajax({
+      url:"answer_write.php",
+      type:"POST",
+      data:{odgovor:$('#answer').text();},
+      success: function () {
+                        $("#SuccessAlert").show(); 
+                        setTimeout(function(){
+                            $("#SuccessAlert").fadeOut(1500); 
+                            
+                        },2000);
+                    }
+          
+      
+     
+       
+   });
+    
+});
 </script>
 
 <style>
