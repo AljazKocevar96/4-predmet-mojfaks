@@ -122,7 +122,14 @@ include_once 'db.php';
             <i class="fa fa-chevron-up" id="hide-action"></i>
 
             <?php
-        } else {
+        } 
+        
+        
+        else {
+            
+            $query="SELECT * FROM uporabniki WHERE id='".$_SESSION['user_id']."'";
+            $result=  mysqli_query($link, $query); 
+            $row=  mysqli_fetch_array($result); 
             ?>
 
 
@@ -136,10 +143,15 @@ include_once 'db.php';
                     <li  role="presentation" class="dropdown" style="float:right; margin-right: 2%; ">
                         <div class="dropdown">
                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                                <i class="fa fa-user"></i> <?php echo $_SESSION['ime']; ?> <span class="caret"></span>
+                                <?php if ($row['admin']==1){ ?> <i style="color:#FFD700;" class="fa fa-user"></i> <?php } 
+                                else { ?> <i class="fa fa-user"></i> <?php } ?> <?php echo $_SESSION['ime']; ?> <span class="caret"></span>
                             </button                         <!-- Left&Right pomakne menij na 0 na desni strani da je v liniji z gumbkom, 
                                                              na levi pa vzame prostora kolikor je širok menij avtomatsko -->
                             <ul class="dropdown-menu" style="right:0; left: auto;"  role="menu" aria-labelledby="dropdownMenu1" >
+                                <?php if ($row['admin']==1){ ?>
+                                <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1"  ><i class="fa fa-trophy"></i> Admin</a></li>
+                                     <hr style="margin:0 1em 0 1em;">
+                                <?php } ?>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="profil.php" ><i class="fa fa-wrench"></i> Profil</a></li>
                                 <hr style="margin:0 1em 0 1em;">
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-comment"></i> Sporočila</a></li>

@@ -23,6 +23,7 @@ if (!empty($_POST['email']) && !empty($_POST['pass'])) {
         $_SESSION['priimek'] = $user['priimek'];
         $_SESSION['email'] = $user['email'];
         $_SESSION['admin']= $user['admin'];
+       
 
         
         header("Location:index.php");
