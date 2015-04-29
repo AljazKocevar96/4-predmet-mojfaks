@@ -5,17 +5,18 @@
         <group>
             <file>file:/C:/xampp/htdocs/MojFaks/header.php</file>
             <file>file:/C:/xampp/htdocs/MojFaks/answer_write.php</file>
-            <file>file:/C:/xampp/htdocs/MojFaks/db.php</file>
-            <file>file:/C:/xampp/htdocs/MojFaks/DoRegister.php</file>
+            <file>file:/C:/xampp/htdocs/MojFaks/prejeto_sporocilo.php</file>
             <file>file:/C:/xampp/htdocs/MojFaks/index.php</file>
             <file>file:/C:/xampp/htdocs/MojFaks/topicWrite.php</file>
             <file>file:/C:/xampp/htdocs/MojFaks/profil.php</file>
+            <file>file:/C:/xampp/htdocs/MojFaks/global_profile.php</file>
+            <file>file:/C:/xampp/htdocs/MojFaks/poslano_sporocilo.php</file>
             <file>file:/C:/xampp/htdocs/MojFaks/search.php</file>
             <file>file:/C:/xampp/htdocs/MojFaks/register.php</file>
             <file>file:/C:/xampp/htdocs/MojFaks/vprasanje.php</file>
             <file>file:/C:/xampp/htdocs/MojFaks/forum.php</file>
-            <file>file:/C:/xampp/htdocs/MojFaks/loginDo.php</file>
-            <file>file:/C:/xampp/htdocs/MojFaks/fakultete.php</file>
+            <file>file:/C:/xampp/htdocs/MojFaks/sporocila.php</file>
+            <file>file:/C:/xampp/htdocs/MojFaks/send_message.php</file>
         </group>
     </open-files>
 </project-private>

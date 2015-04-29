@@ -105,6 +105,7 @@ $row = mysqli_fetch_array($result);
 
 
 if ($row['admin'] == 1) {
+ 
     ?>
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
@@ -117,19 +118,7 @@ if ($row['admin'] == 1) {
                                 </a>
                             </h4>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-2 col-xs-5">
-                            <center> <div class="icons" style="margin-left:15%; ">
-
-                                    <a data-toggle="tooltip" title="Uredi" href="index.php">
-                                        <i id="edit" class="fa fa-pencil" style="color:#428bca; z-index: 1000; "> </i></a>
-
-                                    <a data-toggle="tooltip" title="Onemogoči">
-                                        <i class="fa fa-ban" style="margin-left: 7%; font-size:1.1em; color:#d9534f;"> </i></a>
-
-                                    <a data-toggle="tooltip" title="Izbriši">
-                                        <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; "></i></a>
-                                </div></center>
-                        </div>
+                       
                     </div>
                 </div>
     <?php
@@ -141,18 +130,13 @@ if ($row['admin'] == 1) {
     <?php while ($rowTopicVpis = mysqli_fetch_array($resultTopicVpis)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><a href="vprasanje.php?id=<?php echo $rowTopicVpis['id']; ?>"><?php echo $rowTopicVpis['name']; ?></a></div>
-                                    <div class="col-lg-2 col-md-3 col-sm-2 col-xs-5">
+                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-10"><a href="vprasanje.php?id=<?php echo $rowTopicVpis['id']; ?>"><?php echo $rowTopicVpis['name']; ?></a></div>
+                                    <div class="col-lg-2 col-md-3 col-sm-2 col-xs-2">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
-                                                <a data-toggle="tooltip" title="Uredi" href="index.php">
-                                                    <i id="edit" class="fa fa-pencil" style="color:#428bca; z-index: 1000; "> </i></a>
-
-                                                <a data-toggle="tooltip" title="Onemogoči">
-                                                    <i class="fa fa-ban" style="margin-left: 7%; font-size:1.1em; color:#d9534f;"> </i></a>
-
-                                                <a data-toggle="tooltip" title="Izbriši">
-                                                    <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; "></i></a>
+                                                
+                                                <a style="float:right; margin-right: 10%;"  data-toggle="tooltip" title="Izbriši" href="delete_topic.php?id=<?php echo $rowTopicVpis['id'];?>">
+                                                    <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; float:right; margin-right: 10%; "></i></a>
                                             </div></center>
                                     </div>
 
@@ -173,19 +157,7 @@ if ($row['admin'] == 1) {
                                 </a>
                             </h4>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-2 col-xs-5">
-                            <center> <div class="icons" style="margin-left:15%; ">
-
-                                    <a data-toggle="tooltip" title="Uredi" href="index.php">
-                                        <i id="edit" class="fa fa-pencil" style="color:#428bca; z-index: 1000; "> </i></a>
-
-                                    <a data-toggle="tooltip" title="Onemogoči">
-                                        <i class="fa fa-ban" style="margin-left: 7%; font-size:1.1em; color:#d9534f;"> </i></a>
-
-                                    <a data-toggle="tooltip" title="Izbriši">
-                                        <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; "></i></a>
-                                </div></center>
-                        </div>
+                        
                     </div>
                 </div>
     <?php
@@ -197,18 +169,15 @@ if ($row['admin'] == 1) {
     <?php while ($rowTopicMnenja = mysqli_fetch_array($resultTopicMnenja)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><a href="vprasanje.php?id=<?php echo $rowTopicMnenja['id']; ?>"><?php echo $rowTopicMnenja['name']; ?></a></div>
-                                    <div class="col-lg-2 col-md-3 col-sm-2 col-xs-5">
+                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-10"><a href="vprasanje.php?id=<?php echo $rowTopicMnenja['id']; ?>"><?php echo $rowTopicMnenja['name']; ?></a></div>
+                                    <div class="col-lg-2 col-md-3 col-sm-2 col-xs-2">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
-                                                <a data-toggle="tooltip" title="Uredi" href="index.php">
-                                                    <i id="edit" class="fa fa-pencil" style="color:#428bca; z-index: 1000; "> </i></a>
+                                              
 
-                                                <a data-toggle="tooltip" title="Onemogoči">
-                                                    <i class="fa fa-ban" style="margin-left: 7%; font-size:1.1em; color:#d9534f;"> </i></a>
 
-                                                <a data-toggle="tooltip" title="Izbriši">
-                                                    <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; "></i></a>
+                                                <a style="float:right; margin-right: 10%;"  data-toggle="tooltip" title="Izbriši" href="delete_topic.php?id=<?php echo $rowTopicMnenja['id']; ?>">
+                                                    <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; float:right; margin-right: 10%;"></i></a>
                                             </div></center>
                                     </div>
 
@@ -228,19 +197,7 @@ if ($row['admin'] == 1) {
                                 </a>
                             </h4>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-2 col-xs-5">
-                            <center> <div class="icons" style="margin-left:15%; ">
-
-                                    <a data-toggle="tooltip" title="Uredi" href="index.php">
-                                        <i id="edit" class="fa fa-pencil" style="color:#428bca; z-index: 1000; "> </i></a>
-
-                                    <a data-toggle="tooltip" title="Onemogoči">
-                                        <i class="fa fa-ban" style="margin-left: 7%; font-size:1.1em; color:#d9534f;"> </i></a>
-
-                                    <a data-toggle="tooltip" title="Izbriši">
-                                        <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; "></i></a>
-                                </div></center>
-                        </div>
+                       
                     </div>
                 </div>
     <?php
@@ -252,18 +209,15 @@ if ($row['admin'] == 1) {
     <?php while ($rowTopicNovicke = mysqli_fetch_array($resultTopicNovicke)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-7"><a href="vprasanje.php?id=<?php echo $rowTopicNovicke['id']; ?>"><?php echo $rowTopicNovicke['name']; ?></a></div>
-                                    <div class="col-lg-2 col-md-3 col-sm-2 col-xs-5">
+                                    <div class="col-lg-10 col-md-9 col-sm-10 col-xs-10"><a href="vprasanje.php?id=<?php echo $rowTopicNovicke['id']; ?>"><?php echo $rowTopicNovicke['name']; ?></a></div>
+                                    <div class="col-lg-2 col-md-3 col-sm-2 col-xs-2">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
-                                                <a data-toggle="tooltip" title="Uredi" href="index.php">
-                                                    <i id="edit" class="fa fa-pencil" style="color:#428bca; z-index: 1000; "> </i></a>
+                                              
 
-                                                <a data-toggle="tooltip" title="Onemogoči">
-                                                    <i class="fa fa-ban" style="margin-left: 7%; font-size:1.1em; color:#d9534f;"> </i></a>
 
-                                                <a data-toggle="tooltip" title="Izbriši">
-                                                    <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; "></i></a>
+                                                <a style="float:right; margin-right: 10%;"  data-toggle="tooltip" title="Izbriši" href="delete_topic.php?id=<?php echo $rowTopicNovicke['id']; ?>">
+                                                    <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; float:right; margin-right: 10%;"></i></a>
                                             </div></center>
                                     </div>
 
@@ -289,14 +243,7 @@ if ($row['admin'] == 1) {
                                 </a>
                             </h4>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-2 col-xs-5">
-                            <center> <div class="icons" style="margin-left:15%; ">
-
-                                    <a data-toggle="tooltip" title="Uredi" href="index.php">
-                                        <i id="edit" class="fa fa-pencil" style="color:#428bca; z-index: 1000; "></i></a>
-
-                                </div></center>
-                        </div>
+                       
                     </div>
                 </div>
     <?php
@@ -308,14 +255,13 @@ if ($row['admin'] == 1) {
     <?php while ($rowTopicVpis = mysqli_fetch_array($resultTopicVpis)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9"><a href="vprasanje.php?id=<?php echo $rowTopicVpis['id']; ?>"><?php echo $rowTopicVpis['name']; ?></a></div>
-                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3">
+                                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10"><a href="vprasanje.php?id=<?php echo $rowTopicVpis['id']; ?>"><?php echo $rowTopicVpis['name']; ?></a></div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
 
-                                                <a data-toggle="tooltip" title="Priljubljeno" href="index.php">
-                                                    <i id="favorite" class="fa fa-star" > </i></a>
-
+                                               <a style="float:right; margin-right: 10%;"  data-toggle="tooltip" title="Izbriši" href="delete_topic.php?id=<?php echo $rowTopicVpis['id']; ?>">
+                                                    <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; float:right; margin-right: 10%;"></i></a>
 
                                             </div></center>
                                     </div>
@@ -337,15 +283,7 @@ if ($row['admin'] == 1) {
                                 </a>
                             </h4>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-2 col-xs-5">
-                            <center> <div class="icons" style="margin-left:15%; ">
-
-                                    <a data-toggle="tooltip" title="Uredi" href="index.php">
-                                        <i id="edit" class="fa fa-pencil" style="color:#428bca; z-index: 1000; "> </i></a>
-
-
-                                </div></center>
-                        </div>
+                       
                     </div>
                 </div>
     <?php
@@ -357,14 +295,13 @@ if ($row['admin'] == 1) {
     <?php while ($rowTopicMnenja = mysqli_fetch_array($resultTopicMnenja)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-11 col-md-1 col-sm-11 col-xs-9"><a href="vprasanje.php?id=<?php echo $rowTopicMnenja['id']; ?>"><?php echo $rowTopicMnenja['name']; ?></a></div>
-                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3">
+                                    <div class="col-lg-11 col-md-1 col-sm-11 col-xs-10"><a href="vprasanje.php?id=<?php echo $rowTopicMnenja['id']; ?>"><?php echo $rowTopicMnenja['name']; ?></a></div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
 
-                                                <a data-toggle="tooltip" title="Priljubljeno" href="index.php">
-                                                    <i id="favorite" class="fa fa-star" > </i></a>
-
+                                            <a style="float:right; margin-right: 10%;"  data-toggle="tooltip" title="Izbriši" href="delete_topic.php?id=<?php echo $rowTopicMnenja['id']; ?>">
+                                                    <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; float:right; margin-right: 10%;"></i></a>
 
                                             </div></center>
                                     </div>
@@ -386,15 +323,7 @@ if ($row['admin'] == 1) {
                                 </a>
                             </h4>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-2 col-xs-5">
-                            <center> <div class="icons" style="margin-left:15%; ">
-
-                                    <a data-toggle="tooltip" title="Uredi" href="index.php">
-                                        <i id="edit" class="fa fa-pencil" style="color:#428bca; z-index: 1000; "> </i></a>
-
-
-                                </div></center>
-                        </div>
+                       
                     </div>
                 </div>
 
@@ -407,13 +336,12 @@ if ($row['admin'] == 1) {
     <?php while ($rowTopicNovicke = mysqli_fetch_array($resultTopicNovicke)) { ?>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9"><a href="vprasanje.php?id=<?php echo $rowTopicNovicke['id']; ?>"><?php echo $rowTopicNovicke['name']; ?></a></div>
-                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-3">
+                                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10"><a href="vprasanje.php?id=<?php echo $rowTopicNovicke['id']; ?>"><?php echo $rowTopicNovicke['name']; ?></a></div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
                                         <center> <div class="icons" style="margin-left:15%; ">
 
-                                                <a data-toggle="tooltip" title="Priljubljeno" href="index.php">
-                                                    <i id="favorite" class="fa fa-star" > </i></a>
-
+                                                <a style="float:right; margin-right: 10%;" data-toggle="tooltip" title="Izbriši" href="delete_topic.php?id=<?php echo $rowTopicNovicke['id']; ?>">
+                                                    <i class="fa fa-trash" style="margin-left: 7%; font-size: 1.1em; color:#888888; float:right; margin-right: 10%;"></i></a>
 
                                             </div></center>
                                     </div>
@@ -536,31 +464,31 @@ while ($row4 = mysqli_fetch_array($result4)) {
 
             if (postState === "success") {
 
-                $('#SuccessAlert').show();
+                $('#SuccessAlert').slideDown();
 
                 setTimeout(function () {
 
-                    $('#SuccessAlert').fadeOut(1500);
+                    $('#SuccessAlert').slideUp();
                 }, 2000);
             }
 
             if (postState === "empty") {
 
-                $('#WarningAlert').show();
+                $('#WarningAlert').slideDown();
 
                 setTimeout(function () {
 
-                    $('#WarningAlert').fadeOut(1500);
+                    $('#WarningAlert').slideUp();
                 }, 2000);
             }
 
             if (postState === "fail") {
 
-                $('#FailAlert').show();
+                $('#FailAlert').slideDown();
 
                 setTimeout(function () {
 
-                    $('#FailAlert').fadeOut(1500);
+                    $('#FailAlert').slideUp();
                 }, 2000);
             }
 
@@ -568,5 +496,3 @@ while ($row4 = mysqli_fetch_array($result4)) {
 
     </script>
 </div>
-
-

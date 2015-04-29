@@ -91,7 +91,7 @@ include_once 'db.php';
                 cursor: default; 
             }
 
-            #home:hover, #forum:hover, #faculty:hover, #kviz :hover{
+            #home:hover, #forum:hover, #faculty:hover, #kviz:hover{
 
                 -webkit-transform:scale(1.10); /* Safari and Chrome */
                 -moz-transform:scale(1.10); /* Firefox */
@@ -99,6 +99,13 @@ include_once 'db.php';
                 -o-transform:scale(1.10); /* Opera */
                 transform:scale(1.10);
 
+            }
+            
+            #pismo{
+                color: #dedcd7;
+            }
+            #pismo:hover{
+               color: #777;
             }
 
 
@@ -131,20 +138,52 @@ include_once 'db.php';
             $result=  mysqli_query($link, $query); 
             $row=  mysqli_fetch_array($result); 
             ?>
-
+            <style>
+                .badge-notify{
+                    
+                    background: #f1685e; 
+                    position: absolute;
+                    top:-1px; 
+                    left:20px;
+                    border: solid white medium;
+                    font-size: 0.7em;
+                    
+                }
+            </style>
 
             <nav class="navbar navbar-default" style="background-color: white; position:relative; ">
+<?php 
 
+$query2="SELECT COUNT(id) FROM sporocanje WHERE prejemnik_id=".$_SESSION['user_id']." AND status = 'unRead' ";
+$result2=  mysqli_query($link, $query2); 
+$row2=  mysqli_fetch_array($result2); 
+
+?>
                 <ul class="nav nav-pills" style="margin-left:5%; margin-top:0.5em; margin-bottom: 0.5em; "> 
                     <li id="home" role="presentation" style="margin-right: 0.5em; "><a href="index.php" style="color: rgb(34, 194, 34);"><i class="fa fa-home" style="color: rgb(34, 194, 34);"></i> Domov</a></li>
                     <li id="forum" role="presentation" style="margin-right: 0.5em;"><a href="forum.php" style="color:#febe29;"><i class="fa fa-comments" style="color:#febe29;"></i> Forum</a></li>
                     <li id="faculty" role="presentation" style="margin-right: 0.5em;"><a href="fakultete.php" style="color:#3e5e9a;"><i class="fa fa-institution" style="color:#3e5e9a;"></i> Fakultete</a></li>
                     <li id="kviz" role="presentation" style="margin-right: 0.5em;"><a href="#" style="color:#f1685e;"><i class="fa fa-question" style="color:#f1685e;"></i> Kviz</a></li>
+                    
+                    <li  role="presentation" style="">
+                        <a href="sporocila.php" >
+                            <?php if ($row2['0']>0){ ?>
+                            <i id="pismo" class="fa fa-envelope" style=" color:#777;  font-size: 1.2em;"></i>
+                            <span class="badge badge-notify"><?php echo $row2['0']; ?></span>
+                            <?php }
+                            else{ ?>
+                                 <i id="pismo" class="fa fa-envelope" style="font-size: 1.2em;"></i>
+                           
+                                
+                            <?php }
+                            ?>
+                        </a>
+                    </li>
+                    
                     <li  role="presentation" class="dropdown" style="float:right; margin-right: 2%; ">
                         <div class="dropdown">
                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                                <?php if ($row['admin']==1){ ?> <i style="color:#FFD700;" class="fa fa-user"></i> <?php } 
-                                else { ?> <i class="fa fa-user"></i> <?php } ?> <?php echo $_SESSION['ime']; ?> <span class="caret"></span>
+                                <i class="fa fa-user"></i> <?php echo $_SESSION['ime']; ?><span class="caret"></span>
                             </button                         <!-- Left&Right pomakne menij na 0 na desni strani da je v liniji z gumbkom, 
                                                              na levi pa vzame prostora kolikor je širok menij avtomatsko -->
                             <ul class="dropdown-menu" style="right:0; left: auto;"  role="menu" aria-labelledby="dropdownMenu1" >
@@ -155,7 +194,7 @@ include_once 'db.php';
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="profil.php" ><i class="fa fa-wrench"></i> Profil</a></li>
                                 <hr style="margin:0 1em 0 1em;">
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-comment"></i> Sporočila</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-check"></i>Odločitve in rezultati</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-check"></i> Odločitve in rezultati</a></li>
                                 <hr style="margin:0 1em 0 1em;">
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="logOut.php"><i class="fa fa-sign-out"></i> Odjava</a></li>
 
