@@ -29,7 +29,7 @@ $row=  mysqli_fetch_array($result);
         <div class="col-lg-12" style="margin-left: 3%; ">
             <h4 style="color: #777;">Sporocilo</h4>
             <br>
-            <p>
+            <p style="margin-right: 5%;">
                 <?php echo $row['sporocilo'];  ?>
             </p>
         </div>

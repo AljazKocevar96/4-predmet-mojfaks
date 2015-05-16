@@ -15,7 +15,7 @@ if($_SESSION['user_id']==$row['uporabnik_id'] || $_SESSION['admin']==1){
     $queryDEL="DELETE FROM topic WHERE uporabnik_id=".$_SESSION['user_id']." AND id=".$topicID;
     $result=  mysqli_query($link, $queryDEL); 
     
-   
+   header('Location: forum.php'); 
     
 }
 else{

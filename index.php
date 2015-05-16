@@ -10,22 +10,58 @@ include_once 'session.php';
 <div class="row">
   <div class="col-lg-12 block-flat" >
       <div class="row">
+          <h3 style="margin-left: 3%; color: ">Kratka predstavitev s čim se ukvarjamo.</h3>
+          <hr style="width: 95%;">
+    </div>
+      <div class="row" style=" padding: 3%;">
       <div class="col-lg-9">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend elit non odio tincidunt suscipit hendrerit vel dolor. Nullam bibendum dignissim orci, vel aliquet nunc rutrum non. Cras tortor felis, faucibus ut tempor ac, posuere id massa. Integer pharetra quis erat vitae eleifend. Quisque blandit varius mattis. Aliquam erat volutpat. Nam et tincidunt ante. Nullam varius libero a eleifend facilisis. Fusce et iaculis tellus, ac aliquet diam.
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
 
-Nunc varius id mi sit amet viverra. Mauris condimentum convallis ullamcorper. Praesent sed elit iaculis, viverra leo at, imperdiet purus. Vivamus viverra bibendum sapien, vel bibendum turpis sodales at. Donec in erat ac urna consectetur aliquet et eu mi. Quisque iaculis vel justo sed varius. Donec pretium convallis leo, ut fringilla mauris laoreet vitae. Suspendisse hendrerit eleifend sollicitudin. Sed finibus metus sit amet molestie pretium. Sed finibus tortor elit, sit amet blandit nisi ornare id.
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+        <img src="slike/students_2_big.jpg" alt="Slika1">
+      <div class="carousel-caption">
+        Zadovoljni študentje
+      </div>
+    </div>
+    <div class="item">
+        <img src="slike/prenos.jpg" alt="slika2">
+      <div class="carousel-caption">
+        Študenti
+      </div>
+    </div>
+      
+      <div class="item">
+          <img src="slike/images.jpg" alt="slika2">
+      <div class="carousel-caption">
+        Študentka
+      </div>
+    </div>
+   
+  </div>
 
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas orci tortor, ornare id tincidunt faucibus, mattis egestas leo. Maecenas eget convallis augue. Duis a blandit odio. Vestibulum porta urna in quam malesuada, nec aliquet diam sollicitudin. Praesent nec porta dui. Mauris aliquet et est et consequat. Nullam ornare ex nec gravida efficitur. Sed sit amet neque hendrerit mauris fringilla tincidunt. Nam porttitor lorem nec ex hendrerit tristique. Sed id dapibus dui, ac porta dui. Nam vestibulum diam risus, sodales pellentesque ex convallis et. Mauris varius sodales dui vulputate malesuada. Integer orci ante, convallis nec nulla ut, tempor maximus metus. In pretium dui et metus porttitor, id ultrices tortor vehicula.
-          </p>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
          <div class="clear"></div>
       </div>
       <div class="col-lg-3">
-             <p> 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend elit non odio tincidunt suscipit hendrerit vel dolor. Nullam bibendum dignissim orci, vel aliquet nunc rutrum non. Cras tortor felis, faucibus ut tempor ac, posuere id massa. Integer pharetra quis erat vitae eleifend. Quisque blandit varius mattis. Aliquam erat volutpat. Nam et tincidunt ante. Nullam varius libero a eleifend facilisis. Fusce et iaculis tellus, ac aliquet diam.
-
-Nunc varius id mi sit amet viverra. Mauris condimentum convallis ullamcorper. Praesent sed elit iaculis, viverra leo at, imperdiet purus. Vivamus viverra bibendum sapien, vel bibendum turpis sodales at. Donec in erat ac urna consectetur aliquet et eu mi. Quisque iaculis vel justo sed varius. Donec pretium convallis leo, ut fringilla mauris laoreet vitae. Suspendisse hendrerit eleifend sollicitudin. Sed finibus metus sit amet molestie pretium. Sed finibus tortor elit, sit amet blandit nisi ornare id.
-
-</p>
+             <p>Tukaj imamo slike vseh študentov, ki so že uporabili našo speltno splikacijo za lažjo obločitev za svoje šolanje. Pravijo, da je 
+             ta stran velik napredek na področju pomoči mladim pri iskanju prave poti v poklic s katerim bodo zadovoljni.</p>
       </div>
   </div>
   </div>

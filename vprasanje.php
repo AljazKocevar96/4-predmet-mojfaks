@@ -150,7 +150,7 @@ while ($rowAnswer = mysqli_fetch_array($resultAnswer)) {
                 type: "POST",
                 data: {odgovor: $('#answer').val(), TopicId: tid, quote: AnswerTo, author: AuthorName},
                 success: function () {
-                    $("#SuccessAlert").slideDown()();
+                    $("#SuccessAlert").slideDown();
                     setTimeout(function () {
                         $("#SuccessAlert").slideUp();
                     }, 1500);

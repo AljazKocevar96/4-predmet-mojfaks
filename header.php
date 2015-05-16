@@ -163,7 +163,7 @@ $row2=  mysqli_fetch_array($result2);
                     <li id="home" role="presentation" style="margin-right: 0.5em; "><a href="index.php" style="color: rgb(34, 194, 34);"><i class="fa fa-home" style="color: rgb(34, 194, 34);"></i> Domov</a></li>
                     <li id="forum" role="presentation" style="margin-right: 0.5em;"><a href="forum.php" style="color:#febe29;"><i class="fa fa-comments" style="color:#febe29;"></i> Forum</a></li>
                     <li id="faculty" role="presentation" style="margin-right: 0.5em;"><a href="fakultete.php" style="color:#3e5e9a;"><i class="fa fa-institution" style="color:#3e5e9a;"></i> Fakultete</a></li>
-                    <li id="kviz" role="presentation" style="margin-right: 0.5em;"><a href="#" style="color:#f1685e;"><i class="fa fa-question" style="color:#f1685e;"></i> Kviz</a></li>
+                    <li id="kviz" role="presentation" style="margin-right: 0.5em;"><a href="kviz.php" style="color:#f1685e;"><i class="fa fa-question" style="color:#f1685e;"></i> Kviz</a></li>
                     
                     <li  role="presentation" style="">
                         <a href="sporocila.php" >
@@ -192,9 +192,6 @@ $row2=  mysqli_fetch_array($result2);
                                      <hr style="margin:0 1em 0 1em;">
                                 <?php } ?>
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="profil.php" ><i class="fa fa-wrench"></i> Profil</a></li>
-                                <hr style="margin:0 1em 0 1em;">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-comment"></i> Sporočila</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-check"></i> Odločitve in rezultati</a></li>
                                 <hr style="margin:0 1em 0 1em;">
                                 <li role="presentation"><a role="menuitem" tabindex="-1" href="logOut.php"><i class="fa fa-sign-out"></i> Odjava</a></li>
 
