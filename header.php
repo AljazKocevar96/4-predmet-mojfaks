@@ -30,7 +30,7 @@ include_once 'db.php';
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body style="background-color:#f4f2ed">
+    <body style="background-color:#f4f2ed; padding-bottom: 5%; ">
 
         <script>
             $(document).ready(function () {

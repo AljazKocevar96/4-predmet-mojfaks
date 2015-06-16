@@ -8,13 +8,21 @@ include_once 'session.php';
 <div class="container">
     
 <div class="row">
-  <div class="col-lg-12 block-flat" >
+  <div class="col-lg-12-bg block-flat" >
       <div class="row">
           <h3 style="margin-left: 3%; color: ">Kratka predstavitev s čim se ukvarjamo.</h3>
           <hr style="width: 95%;">
     </div>
+<center>
+      <div class="col-lg-11" style="margin-right: 3%; margin-left: 3%; ">
+         <strong> <p>Moj faks je spletna stran namenjena študentom, ki imajo težavo z odločanjem glede njihove študijske poti.
+              Tukej imate zbrane vse slovenske fakultete zbrane na enem mestu. O njih se lahko pogovarjate z ostalimi uporabniki
+              foruma, lahko pa se testirate s kvizom, ki vam bo pomagal pri odločitvi.</p></strong>
+      </div>
+    </center>
+
       <div class="row" style=" padding: 3%;">
-      <div class="col-lg-9">
+      <div class="col-lg-12">
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -59,11 +67,11 @@ include_once 'session.php';
 </div>
          <div class="clear"></div>
       </div>
-      <div class="col-lg-3">
-             <p>Tukaj imamo slike vseh študentov, ki so že uporabili našo speltno splikacijo za lažjo obločitev za svoje šolanje. Pravijo, da je 
-             ta stran velik napredek na področju pomoči mladim pri iskanju prave poti v poklic s katerim bodo zadovoljni.</p>
-      </div>
+
   </div>
+
+
+
   </div>
  
 </div>
@@ -74,7 +82,7 @@ include_once 'session.php';
 </html>
 
 <style>
-    .col-lg-12{
+    .col-lg-12-bg{
         
     background-color: white;
     box-shadow: 1px 1px 2px #bbbbbb;
